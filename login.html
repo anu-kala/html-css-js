@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="login">
+        <div class="finalLogin">
+            <div class="container">
+                <div class="left">
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <form name="form" method="post" action="#">
+                            <span class="loginHeading">Login</span><br/><br/>
+                            <label for="emailText" class="emailLabel">Email</label>
+                            <div class="form-group has-feedback">                                
+                                <input type="email" placeholder="abc@xyz.com" class="emailText form-control" id="email" required autofocus>
+                                <span class="glyphicon form-control-feedback"></span>                            
+                            </div>
+                            
+                            <label for="passwordText" class="passwordLabel">Password</label>
+                            <div class="form-group has-warning has-feedback">                                
+                                <input type="password" placeholder="Enter Password" class="passwordText form-control" id="password" required>
+                                <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>                            
+                            </div>
+                            <div class="forgotPassDiv"><a href="#"><label class="forgotPassword">Forgot Password ?</label></a></div>
+                            <br/>
+                            <div class="loginBtnDiv"><input type="submit" name="Login" class="loginButton" value="Login"></div>
+
+                            
+                            <div class="connectionDiv">
+                                <div class="line"></div>
+                                <div class="text">or connect with</div>
+                                <div class="line"></div>
+                            </div>
+                            <br/><br>
+                            <div class="logoDiv">
+                                <div class="logo"><a href="#"><img class="icon" src="images/microsoft.png"></a></div>
+                                <div class="logo"><a href="#"><img class="icon" src="images/facebook.png"></a></div>
+                                <div class="logo"><a href="#"><img class="icon" src="images/google.png"></a></div>
+                                <div class="logo"><a href="#"><img class="icon" src="images/linkedin.png"></a></div>
+                            </div>
+                            <div class="noAccountDiv">
+                                <span class="noAccountText">
+                                    Don't have an Account? 
+                                    <a href="#"><span class="signup">SignUp</span></a>
+                                </span>
+                            </div>
+                            <br/>
+                            
+                            <br/><br/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

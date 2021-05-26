@@ -1,0 +1,201 @@
+html {
+	width:100%;
+	height:100%;
+}
+body {
+    width:100%;
+	height:100%;
+    padding: 0%;
+    border: 0%;
+    margin: 0%;
+}
+.login {
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    background-image: url("../images/finalLogin.png");
+    display: block;
+    border: 1px rgba(112, 112, 112, 1) none;
+}
+.login .finalLogin {
+    display: inline-block;
+    height: 80%;
+    width: 80%;
+    padding: 0%;
+    margin-top: 5%;
+    margin-left: 10%;
+    
+    background-color: rgba(255,255,255,1);
+    border: 1px rgba(112, 112, 112, 1) none;
+    border-radius: 22px;
+}
+
+.login .finalLogin .container {
+    height: 80%;
+    width: 80%;
+    padding: 0%;
+    margin: 1%;
+    border: 1px rgba(112, 112, 112, 1) none;
+    border-radius: 22px;
+    clear:both;
+    position:absolute;
+}
+
+.login .finalLogin .container .left {
+    height: 95%;
+    width: 50%;
+    padding: 0%;
+    margin: 0% 2%;
+    background-image: url("../images/vector64bdf83d.png");
+    background-size: cover;
+    border-radius: 22px;
+    float:left;
+}
+
+.login .finalLogin .container .right {
+    height: 95%;
+    width: 35%;
+    padding: 0%;
+    margin-left:2.5%;
+    border-radius: 22px;
+    float:left;
+}
+
+.login .finalLogin .container .right .content{
+    font-family: 'Segoe UI', Arial;
+    padding: 6%;
+    border-radius: 22px;
+    margin:0 auto;
+    vertical-align:middle;
+}
+
+.login .finalLogin .container .right .content .loginHeading{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.login .finalLogin .container .right .content .emailLabel,.passwordLabel{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.login .finalLogin .container .right .content .form-group .emailText{
+    margin-top:5px;
+    font-size: 20px;
+    font-weight: 300;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:10px;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: rgba(231, 244, 255, 1);
+    color:black;
+}
+
+.login .finalLogin .container .right .content .form-group .passwordText{
+    margin-top:5px;
+    font-size: 20px;
+    font-weight: 300;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:10px;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: rgb(255, 235, 231 ,1);
+    color: red;
+}
+.login .finalLogin .container .right .content .form-group .emailText:focus,.passwordText:focus{
+    outline-width: 0;
+    
+}
+
+.login .finalLogin .container .right .content .forgotPassDiv{
+    text-align: right;
+    width:100%;
+}
+.login .finalLogin .container .right .content .forgotPass .forgotPassword{
+    font-size: 15px;
+    font-weight: 300;
+}
+a { 
+    text-decoration: none;
+}
+
+.login .finalLogin .container .right .content .loginBtnDiv {
+    text-align:center;
+    width:100%;
+}
+.login .finalLogin .container .right .content .loginBtnDiv .loginButton {
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgba(0, 119, 254,0.9);
+    border:none;
+    border-radius: 10px;
+    color: white;
+    cursor:pointer; 
+}
+.login .finalLogin .container .right .content .loginBtnDiv .loginButton:hover {
+    opacity:1;
+}
+
+.login .finalLogin .container .right .content .connectionDiv {
+    clear:both;
+    position:absolute;
+    display:block;
+    width:50%;
+}
+.login .finalLogin .container .right .content .connectionDiv .text{
+    border:none;
+    float:left;
+    color:lightslategray;
+    font-size: 13px;
+}
+.login .finalLogin .container .right .content .connectionDiv .line{
+    margin-top:20px;
+    width:25%;
+    float:left;
+    border-top:1px solid lightslategrey;
+    
+}
+
+.login .finalLogin .container .right .content .logoDiv {
+    clear:both;
+    position:absolute;
+    display:block;
+    align-items: center;
+    justify-content: center;
+}
+.login .finalLogin .container .right .content .logoDiv .logo {
+    float:left;
+    width: 15%;
+    height:20%;
+    margin-left:5%;
+    border-radius:5px;
+}
+.login .finalLogin .container .right .content .logoDiv .logo .icon {
+    width: 50%;
+    height:50%;
+}
+.login .finalLogin .container .right .content .noAccountDiv {
+    margin-top:15%;
+    text-align:center;
+    width:100%;
+}
+.login .finalLogin .container .right .content .noAccountDiv .noAccountText{
+    font-size: 17px;
+    font-weight: 500;
+}
+.login .finalLogin .container .right .content .noAccountDiv .noAccountText .signup{
+    color:blue;
+    font-weight:800;
+}

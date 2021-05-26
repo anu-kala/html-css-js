@@ -1,0 +1,249 @@
+<html>
+<head>
+<title>Registration form </title>
+<style>
+.c-name{background-color:#1669BB;
+padding:5px;
+color:white;
+font-family: Arial, sans-serif;
+}
+
+.RF{
+background-color:#9B124E;
+color:white;
+padding:7px;
+font-family: Arial, sans-serif;
+}
+input{
+width:300px;
+height:40px;
+border-top-style: hidden;
+border-right-style: hidden;
+border-left-style: hidden;
+border-bottom-style: solid;
+}
+select{
+width:300px;
+height:40px;
+border-top-style: hidden;
+border-right-style: hidden;
+border-left-style: hidden;
+border-bottom-style: solid;
+}
+td{
+width:300px;
+text-align:center;
+padding:6px; 
+}          
+#Register {height:30px; width:150px; border:1px solid black;}
+#Reset{height:30px; width:150px; border:1px solid black;}
+
+</style>
+
+<script type="text/javascript">
+var citiesByState = 
+{Maharashtra: ["Mumbai","Pune","Nagpur"],
+Kerala: ["kochi","Palakkad"]
+}
+function makeSubmenu(value) {
+	if(value.length==0) 
+		document.getElementById("District").innerHTML = "<option></option>";
+	else {
+		var citiesOptions = "";
+		for(cityId in citiesByState[value]) {
+			citiesOptions+="<option value=\"" +citiesByState[value][cityId]+ "\">"+citiesByState[value][cityId]+"</option>";
+		}
+		document.getElementById("District").innerHTML = citiesOptions;
+	}
+}
+function confirmpassword(value){
+	if(value==  document.getElementById("psw").value) {
+		document.getElementById("message").innerHTML=" <font color=\"green\"> password match</font>"
+		document.getElementById("Register").disabled=false;
+	
+	} else {
+		document.getElementById("message").innerHTML="password doesn't match".fontcolor("red");
+document.getElementById("Register").disabled=true;
+	
+	}
+}
+function calculate_age(value)
+{
+	var birth_date = new Date(value);
+	var birth_date_day = birth_date.getDate();
+	var birth_date_month = birth_date.getMonth();
+    var birth_date_year = birth_date.getFullYear();
+
+	var today_date = new Date();
+	var today_day = today_date.getDate();
+    var today_month = today_date.getMonth();
+    var today_year = today_date.getFullYear();
+
+	var calculated_age = 0;
+
+	if (today_month > birth_date_month) calculated_age = today_year - birth_date_year;
+	else if (today_month == birth_date_month)
+	{
+		if (today_day >= birth_date_day) calculated_age = today_year - birth_date_year;
+        else calculated_age = today_year - birth_date_year - 1;
+	}
+	else calculated_age = today_year - birth_date_year - 1;
+
+	return calculated_age;
+}
+
+
+
+function checkage(value){
+//alert(calculate_age(value));
+	if (calculate_age(value) < 25) {
+		document.getElementById("message").innerHTML="Eligible age is 25 years".fontcolor("red");
+		document.getElementById("Register").disabled=true;
+	} else {
+		document.getElementById("message").innerHTML="";
+		document.getElementById("Register").disabled=false;
+	}
+}
+
+</script>
+ </head>
+<body>
+<div class="c-name">
+<h2>NCERC</h2></div>
+<div class="RF">
+<h2>Registration form</h2>
+</div>
+<div>
+<form>
+<table>
+<tr>
+<td>
+<select name="sal" id="sal">
+<option value="">select salutation</option>
+<option value="Mr">Mr</option>
+<option value="Mrs">Mrs</option>
+<option value="Ms">Ms</option>
+</select>
+ </td>
+<td> <input type="text" name="Firstname" id="Firstname" placeholder="First name" required ></td>
+<td> <input type="text" name="Middlename" id="Middlename" placeholder="MIddle name" required ></td>
+<td> <input type="text" name="Lastname" id="Lastname" placeholder="Last name" required ></td>
+ </tr>
+ <tr>
+ <td> <input type="text" name="DOB" id="DOB" placeholder="Select Date of Birth	" onchange="checkage(this.value)" onfocus="(this.type='date')" onblur="(this.type='text')" required ></td>
+ <td>
+ <select name="caste_category" id="caste_category">
+<option value="">select category</option>
+<option value="SC">SC</option>
+<option value="ST">ST</option>
+<option value="OBC">OBC</option>
+<option value="GEN">GEN</option>
+</select>
+</td>
+<td>
+ <select name="caste" id="caste">
+<option value="">select caste</option>
+<option value="Nambiar">Nambiar</option>
+<option value="Nair">Nair</option>
+<option value="Kurup">kurup</option>
+<option value="Ezhava">Ezhava</option>
+</select>
+</td>
+ <td>
+ <select name="marital" id="marital">
+<option value="">select marital status</option>
+<option value="Married">Married</option>
+<option value="Unmarried">Unmarried</option>
+
+</select>
+</td>
+</tr>
+<tr>
+ <td> <input type="text" name="Address" id="Address" placeholder="Address" required ></td>
+ 
+ <td>
+ <select name="state" id="state" onchange="makeSubmenu(this.value);">
+<option value="">select state</option>
+<option value="Kerala">Kerala</option>
+<option value="Maharashtra">Maharashtra</option>
+
+</select>
+</td>
+  <td>
+ <select name="District" id="District">
+<option value="">select District</option>
+
+
+
+</select>
+</td>
+ 
+ <td> <input type="text" name="Pincode" id="pincode" placeholder="pincode" required ></td>
+ 
+ 
+ </tr>
+ 
+ <tr>
+ <td>
+ <select name="Discipline" id="Discipline">
+<option value="">select Discipline</option>
+<option value="ECE">ECE</option>
+<option value="MECH">MECH</option>
+<option value="EEE">EEE</option>
+
+</select>
+</td>
+  
+  <td><input type="tel" id="contactnumber" name="contactnumber" placeholder="Contact number" pattern="[0-9]{10}" required></td>
+
+  
+  <td><input type="tel" id="Alternatenumber" name="Alternatenumber" placeholder="AlternateContact number" pattern="[0-9]{10}" required></td>
+  
+ </tr>
+<tr>
+<td><input type="email" id="email" name="email" placeholder="E-mail"></td>
+<td><input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" required></td>
+
+ <td><input type="password" id="cpsw" name="cpsw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"placeholder="confirm password" onkeyup="confirmpassword(this.value)" required></td>
+ 
+ </tr>
+ <tr>
+<td><input type="submit" id="Register" name="Register" value="Register"></td>
+<td><input type="Reset" id="Reset" name="Reset"></td>
+<td id="message"></td>
+
+</tr>
+
+
+
+ </table>
+ 
+</form></div>
+<div class="c-name">
+ <h2>OTTAPALAM</h2></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

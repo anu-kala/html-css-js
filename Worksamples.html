@@ -1,0 +1,79 @@
+<html>
+<head>
+<title> Work Samples</title>
+
+<script>
+function bodyLoad(){
+	document.getElementById("Task1").className=document.getElementById("Task1").className + " selected";
+}
+
+function changeframe(a)
+{  	
+	document.getElementById("frame").src=a.id+".html";
+	var x = document.getElementsByClassName("link");
+	for (var i = 0 ; i < x.length ; i++) {
+		x[i].className = x[i].className.replace(" selected","");
+	}
+	
+	a.className = a.className+" selected";
+}
+</script>
+</head>
+<style>
+.box1{
+width:19.9%;
+height:99%;
+border:1px solid black;
+display:inline;
+position:absolute; 
+left:0.1%; 
+top:0.1%;
+
+}
+.link{
+display:block;
+width:100%;
+height:60px;
+border:1px solid black;
+background-color:#add8e6;
+
+}
+.link p{vertical-align:middle;
+font-size:18px;}
+.box2{
+width:79%;
+height:99%;
+border:1px solid black;
+display:inline;
+position:absolute;
+left:20%; 
+top:0.1%;
+
+}
+.link:hover{background-color:#000080;color:#FFFFFF;}
+
+.selected{background-color:#000080;color:#FFFFFF;}
+
+
+</style>
+
+
+
+
+<body onload="bodyLoad();">
+
+<div class="box1"> 
+<h1>Work Sample</h1>
+
+<span class="link" id="Task1" onclick="changeframe(this);"> <p>Rangoli-1(Using Inline CSS)</p></span>
+<span class="link" id="Task2" onclick="changeframe(this);"><p>Rangoli-2(Using Internal CSS)</p></span>
+<span class="link" id="Task3" onclick="changeframe(this)";><p>Rangoli-3(Using External CSS)</p></span>
+<span class="link" id="RegistrationForm" onclick="changeframe(this);"><p>Registration form (validation using JS - non-responsive)</p></span>
+<span class="link" id="login" onclick="changeframe(this);"><p>Login form (responsive using bootstrap)</p></span>
+<span class="link" id="solarsystem" onclick="changeframe(this);"><p>Solar system (simple html-css)</p></span>
+<span class="link" id="hmd" onclick="changeframe(this);"><p>Happy Mothers Day</p></span>
+</div>
+<div class="box2"><iframe src="Task1.html" height="100%" width="100%" id="frame"></iframe></div>
+
+</body>
+</html>

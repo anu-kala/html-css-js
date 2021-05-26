@@ -1,0 +1,63 @@
+<html> 
+<head>
+<title>Task2-Example of internal CSS</title>
+<style>
+
+.rectangle1{
+	width:500px;
+	height:250px;
+	background:linear-gradient(to right,#FA4226 0%,#FA4226 50%,#F5F6FA 50%,#F5F6FA 100%);
+}
+.rectangle2{
+width:500px;
+height:250px;
+background:linear-gradient(to right,#8091A5 0%,#8091A5 50%,#293E75 50%,#293E75 100%);
+}
+.arc1 {
+height:125px;
+width:125px;
+background-color:#F5F6FA;
+border-radius:125px 0px 125px 0px;
+display:inline-block;
+margin:125px 250px 0px 125px;
+}
+
+.arc2 {
+height:125px;
+width:125px;
+background-color:#293E75;
+border-radius:0px 125px 0px 125px;
+display:inline-block;
+margin:-125px 125px 0px 250px;
+}
+.arc3 {
+height:125px;
+width:125px;
+background-color:#FA4226;
+border-radius:0px 125px 0px 125px;
+display:inline-block;
+margin:0px 250px 125px 125px;
+}
+.arc4{
+height:125px;
+width:125px;
+background-color:#8091A5;
+border-radius:125px 0px 125px 0px;
+display:inline-block;
+margin:-250px 125px 125px 250px;
+}
+</style>
+</head>
+<body> 
+<div class="rectangle1">
+	<span class="arc1"></span>
+	<span class="arc2"></span>
+	
+</div>
+<div class="rectangle2">
+	<span class="arc3"></span>
+	<span class="arc4"></span>
+</div>
+<h1>Implemented using Internal CSS</h1>
+</body>
+</html>
